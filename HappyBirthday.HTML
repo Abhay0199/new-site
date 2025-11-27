@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday My Love </title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            margin: 20px;
+            /* body ke andar thoda space */
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff6a88, #ff99ac, #ffc3de);
+            background-size: 300% 300%;
+            animation: bgMove 10s infinite alternate;
+            color: #f10606;
+            text-align: center;
+            overflow-x: hidden;
+
+            border: 10px solid #fff;
+            /* white border */
+            border-radius: 30px;
+            /* rounded corners */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+            /* soft shadow */
+        }
+
+
+        @keyframes bgMove {
+            0% {
+                background-position: left;
+            }
+
+            100% {
+                background-position: right;
+            }
+        }
+
+        /* Stars */
+        .star {
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+            opacity: 0.6;
+        }
+
+        @keyframes twinkle {
+            50% {
+                opacity: 1;
+            }
+        }
+
+
+        h1 {
+
+            font-size: 3rem;
+            font-family: 'Great Vibes', cursive;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        H2 {
+            font-size: 3.5rem;
+            font-family: 'Comic Sans MS', cursive;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            animation: fadeIn 2s ease-in-out;
+            text-transform: uppercase;
+            color: #f10660;
+
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Photo frame slideshow */
+        .photo-frame {
+            margin: 20px auto;
+            width: 280px;
+            height: 280px;
+            border-radius: 30px;
+            overflow: hidden;
+            border: 6px solid #fff;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+            animation: heartbeat 2s infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.07);
+            }
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: fadeSlide 1.5s ease-in-out;
+        }
+
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: scale(1.1);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Romantic message */
+        .msg {
+            width: 85%;
+            margin: 25px auto;
+            font-size: 2rem;
+            line-height: 1.7;
+            opacity: 0;
+            animation: fadeInText 4s forwards 2s;
+            font-family: 'Great Vibes', cursive;
+            /* Add this line for a romantic/script font */
+            font-weight: 400;
+            /* optional: change thickness */
+            color: #ee3f0a;
+            /* optional: change text color */
+        }
+
+
+        @keyframes fadeInText {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Balloons */
+        .balloon {
+            position: fixed;
+            bottom: -100px;
+            animation: rise 10s infinite ease-out;
+            opacity: 0.8;
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(-120vh) rotate(20deg);
+            }
+        }
+
+        /* Cake */
+        .cake {
+            font-size: 3rem;
+            margin-top: 10px;
+            animation: wobble 2s infinite;
+        }
+
+        @keyframes wobble {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
+        }
+
+        /* Button */
+        .btn {
+            margin-top: 25px;
+            margin-bottom: 20px;
+            padding: 14px 35px;
+            background: #fff;
+            color: #ff3f7f;
+            border: none;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background: #ffe8f1;
+        }
+
+        /* Hearts floating */
+        .heart {
+            position: fixed;
+            bottom: -10px;
+            font-size: 24px;
+            animation: floatUp 6s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-700px);
+                opacity: 0;
+            }
+        }
+
+        /* Confetti */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: yellow;
+            top: -10px;
+            animation: fall 4s linear infinite;
+        }
+
+        @keyframes fall {
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Happy Birthday My Love ❤️</h1>
+    <H2>SHIVU ❤️❤️</H2>
+
+    <div class="photo-frame">
+        <a href="https://ibb.co/hJgQh33p"><img src="https://i.ibb.co/fzX6Bjjm/1758008011140.png" alt="1758008011140"
+                border="0"></a>
+    </div>
+
+    <div class="cake">🎂</div>
+
+    <p class="msg">
+        You are the light of my life,
+        the smile in my mornings,
+        and the magic in my days. 💖
+        Every moment with you is special,
+        and today is the most special of all.
+        Happy Birthday, my Motu. ❤️🎉
+        <span>
+            I’m yours… today, tomorrow, and always. ❤️ </span><br />
+    </p>
+
+
+    <button class="btn" onclick="playMusic()">Play Birthday Song 🎵</button>
+
+    <audio id="song" preload="auto">
+        <source src="https://www.orangefreesounds.com/wp-content/uploads/2016/06/Happy-birthday-song.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+    <script>
+        const song = document.getElementById("song");
+        function playMusic() {
+            const song = document.getElementById("song");
+            song.play().catch(err => {
+                alert("Click again to play music — browser blocked autoplay.");
+            });
+        }
+
+
+        /* Slideshow */
+        const photos = [
+            "https://ibb.co/8grpd5Jc",
+            "https://picsum.photos/300",
+            "https://picsum.photos/id/237/300"
+        ];
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % photos.length;
+            document.getElementById("slide").src = photos[index];
+        }, 3000);
+
+        /* Floating Hearts */
+        setInterval(() => {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.textContent = "❤️";
+            heart.style.left = Math.random() * window.innerWidth + "px";
+            heart.style.fontSize = (20 + Math.random() * 20) + "px";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 6000);
+        }, 600);
+
+        /* Balloons */
+        setInterval(() => {
+            const balloon = document.createElement("div");
+            balloon.className = "balloon";
+            balloon.textContent = "🎈";
+            balloon.style.left = Math.random() * window.innerWidth + "px";
+            balloon.style.fontSize = (40 + Math.random() * 30) + "px";
+            balloon.style.animationDuration = (8 + Math.random() * 5) + "s";
+            document.body.appendChild(balloon);
+            setTimeout(() => balloon.remove(), 12000);
+        }, 900);
+
+        /* Stars */
+        for (let i = 0; i < 40; i++) {
+            let s = document.createElement("div");
+            s.className = "star";
+            s.style.left = Math.random() * 100 + "vw";
+            s.style.top = Math.random() * 100 + "vh";
+            s.style.animationDuration = (1 + Math.random() * 2) + "s";
+            document.body.appendChild(s);
+        }
+
+        /* Confetti */
+        setInterval(() => {
+            let c = document.createElement("div");
+            c.className = "confetti";
+            c.style.left = Math.random() * 100 + "vw";
+            c.style.background = ["#ff3f7f", "#ffdd59", "#7efff5", "#fff200"][Math.floor(Math.random() * 4)];
+            c.style.animationDuration = (3 + Math.random() * 2) + "s";
+            document.body.appendChild(c);
+            setTimeout(() => c.remove(), 5000);
+        }, 200);
+
+
+    </script>
+
+</body>
+
+</html>
